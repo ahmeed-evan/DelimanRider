@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DelimanRidrNewUI</string>
+    <string name="cancel_warning_text">Are you sure to cancel this \ndelivery ?</string>
+</resources>
