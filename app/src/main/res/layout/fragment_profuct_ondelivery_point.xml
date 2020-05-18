@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/onDeliveryPointLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent=".1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent=".9" />
+
+    <Button
+        android:id="@+id/merchantButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_white_round_24_black_stroke"
+        android:elevation="2dp"
+        android:padding="16dp"
+        android:text="Merchant"
+        android:textAllCaps="true"
+        android:textAppearance="@style/Rubbik_14_Black"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".3" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        app:cardBackgroundColor="@color/colorBlack"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="2dp"
+        app:layout_constraintBottom_toBottomOf="@id/merchantButton"
+        app:layout_constraintLeft_toRightOf="@id/merchantButton"
+        app:layout_constraintTop_toTopOf="@id/merchantButton"
+        app:layout_constraintWidth_percent=".3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="16dp"
+            android:text="Receiver"
+            android:textAllCaps="true"
+            android:textAppearance="@style/Rubbik_14_White" />
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/phoneIconFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/colorYellow"
+        android:src="@drawable/ic_phone_black"
+        app:borderWidth="0dp"
+        app:elevation="1dp"
+        app:fabCustomSize="50dp"
+        app:layout_constraintRight_toRightOf="@id/rightGuideline"
+        app:maxImageSize="20dp"
+        app:pressedTranslationZ="1dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
