@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/colorWhite"
+    app:cardCornerRadius="16dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toRightOf="parent"
+    app:layout_constraintRight_toLeftOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/topGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="20dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bottomGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="20dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/leftGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/rightGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="20dp" />
+
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sara_profile_picture"
+            app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@id/topGuideline" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="Sarah"
+            android:textAppearance="@style/Rubbik_16_Black"
+            app:layout_constraintBottom_toBottomOf="@id/profileImage"
+            app:layout_constraintLeft_toRightOf="@id/profileImage"
+            app:layout_constraintTop_toTopOf="@id/profileImage" />
+
+        <TextView
+            android:id="@+id/showingCreditTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1000"
+            android:textAppearance="@style/Rubbik_14_White"
+            android:textStyle="bold"
+            android:textColor="@color/colorGreene"
+            app:layout_constraintBottom_toBottomOf="@id/profileImage"
+            app:layout_constraintRight_toLeftOf="@id/rightGuideline"
+            app:layout_constraintTop_toTopOf="@id/profileImage" />
+
+        <ImageView
+            android:id="@+id/bdtSignImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_bdt_sign_image"
+            app:layout_constraintBottom_toBottomOf="@id/profileImage"
+            app:layout_constraintRight_toLeftOf="@id/showingCreditTextView"
+            app:layout_constraintTop_toTopOf="@id/profileImage" />
+
+        <ImageView
+            android:id="@+id/documentSignImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_document_image"
+            app:layout_constraintBottom_toBottomOf="@id/profileImage"
+            app:layout_constraintRight_toLeftOf="@id/bdtSignImageView"
+            app:layout_constraintTop_toTopOf="@id/profileImage" />
+
+        <ImageView
+            android:id="@+id/locationSignImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/ic_loacation_sign_image"
+            app:layout_constraintLeft_toRightOf="@id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@id/profileImage" />
+
+        <TextView
+            android:id="@+id/loactionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="Uttara Sec 4"
+            android:textAppearance="@style/Rubbik_16_Black"
+            app:layout_constraintBottom_toBottomOf="@id/locationSignImage"
+            app:layout_constraintLeft_toRightOf="@id/locationSignImage"
+            app:layout_constraintTop_toTopOf="@id/locationSignImage" />
+
+        <TextView
+            android:id="@+id/loactionDetailsTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="@string/location_text_addess_profile"
+            android:textAlignment="viewStart"
+            app:layout_constraintStart_toStartOf="@id/loactionTextView"
+            app:layout_constraintTop_toBottomOf="@id/loactionTextView"
+            app:layout_constraintWidth_percent=".5" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/notInterestedButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="32dp"
+            app:cardBackgroundColor="#EB5757"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toTopOf="@id/bottomGuideline"
+            app:layout_constraintLeft_toRightOf="@id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@id/loactionDetailsTextView"
+            app:layout_constraintWidth_percent=".4">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Not Interested"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textAppearance="@style/Rubbik_14_White" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/acceptButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            app:cardBackgroundColor="#00C48C"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/notInterestedButton"
+            app:layout_constraintRight_toLeftOf="@id/rightGuideline"
+            app:layout_constraintTop_toTopOf="@id/notInterestedButton"
+            app:layout_constraintWidth_percent=".4">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="accept"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textAppearance="@style/Rubbik_14_White" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

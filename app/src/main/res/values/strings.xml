@@ -2,4 +2,5 @@
     <string name="app_name">DelimanRidrNewUI</string>
     <string name="cancel_warning_text">Are you sure to cancel this \ndelivery ?</string>
     <string name="merchants_given_code_text">Enter 4 Digit Code Send to \nMerchant’s Mobile Number</string>
+    <string name="location_text_addess_profile">Road 6/A, House no 632,\nItsoul Lab, 1st floor</string>
 </resources>

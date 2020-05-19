@@ -6,7 +6,9 @@
     <color name="colorYellow">#FFCB08</color>
     <color name="colorBlack">#151522</color>
     <color name="colorRed">#EB5757</color>
-    <color name="colorWhite">#ffffff</color>
+    <color name="colorWhite">#FCFCFC</color>
     <color name="colorCream">#FFF8F2</color>
     <color name="colorGray">#E5E5E5</color>
+    <color name="colorPurple">#33BE52F2</color>
+    <color name="colorGreene">#00C48C</color>
 </resources>

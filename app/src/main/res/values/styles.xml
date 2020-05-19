@@ -50,11 +50,25 @@
         <item name="android:textStyle">normal</item>
     </style>
 
+    <style name="Rubbik_16_Black">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="fontFamily">@font/rubik</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
     <style name="Rubbik_14_White">
         <item name="android:textColor">@color/colorWhite</item>
         <item name="fontFamily">@font/rubik</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="termSwitch" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">#f1f1f1</item>
+        <item name="colorSwitchThumbNormal">#f1f1f1</item>
+        <item name="android:colorForeground">#F2994A
+        </item>
     </style>
 
 </resources>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/riderContactCardView"
+    android:layout_width="match_parent"
+    app:cardBackgroundColor="@color/colorWhite"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingBottom="12dp"
+        android:paddingTop="12dp"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/leftGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/rightGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="20dp" />
+
+        <ImageView
+            android:id="@+id/riderProfilePicture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sara_profile_picture"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="Sarah"
+            android:textAppearance="@style/Rubbik_16_Black"
+            app:layout_constraintBottom_toBottomOf="@id/riderProfilePicture"
+            app:layout_constraintLeft_toRightOf="@id/riderProfilePicture"
+            app:layout_constraintTop_toTopOf="@id/riderProfilePicture" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/phoneIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            android:src="@drawable/ic_phone_icon"
+            app:backgroundTint="@color/colorWhite"
+            app:fabCustomSize="36dp"
+            app:pressedTranslationZ="1dp"
+            app:layout_constraintBottom_toBottomOf="@id/riderProfilePicture"
+            app:layout_constraintRight_toRightOf="@id/rightGuideline"
+            app:layout_constraintTop_toTopOf="@id/riderProfilePicture"
+            app:maxImageSize="36dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/commentIcon"
+            android:layout_width="wrap_content"
+            app:pressedTranslationZ="1dp"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            android:src="@drawable/ic_comment_icon"
+            app:backgroundTint="@color/colorWhite"
+            app:fabCustomSize="36dp"
+            app:layout_constraintBottom_toBottomOf="@id/riderProfilePicture"
+            app:layout_constraintRight_toLeftOf="@id/phoneIcon"
+            android:layout_marginRight="24dp"
+            app:layout_constraintTop_toTopOf="@id/riderProfilePicture"
+            app:maxImageSize="36dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
