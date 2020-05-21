@@ -13,7 +13,7 @@ public class TestFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.fragment_rider_option_items,container,false);
+        View view=inflater.inflate(R.layout.fragment_user_profile,container,false);
         return view;
     }
 }

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryOrange">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="56dp" />
+
+    <ImageView
+        android:id="@+id/fabBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_arrow_back_white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/headerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:text="Deposit Balance"
+        android:textAppearance="@style/Quicksand_20_White_Medium"
+        app:layout_constraintLeft_toRightOf="@id/fabBack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/background_round_top_16"
+        app:layout_constraintBottom_toBottomOf="@id/headerLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topGuideline">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/leftGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/rightGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bottomGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="32dp" />
+
+        <TextView
+            android:id="@+id/merchantAccountNumberShowingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Deliman Merchant Account"
+            android:textAppearance="@style/Rubbik_14_Black_Medium"
+            app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/merchantAccountNumberInfoLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@id/merchantAccountNumberShowingTextView">
+
+            <ImageView
+                android:id="@+id/accountProviderIconImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_bkash_logo" />
+
+            <TextView
+                android:id="@+id/accountNumberEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/accountProviderIconImageView"
+                android:layout_alignBottom="@id/accountProviderIconImageView"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/accountProviderIconImageView"
+                android:gravity="center_vertical"
+                android:text="01886 38 28 18"
+                android:textAppearance="@style/Rubbik_16_Black"
+                android:textColor="@color/colorPrimaryOrange" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/referenceNumberShowingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Reference Number"
+            android:textAppearance="@style/Rubbik_14_Black_Medium"
+            app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@id/merchantAccountNumberInfoLayout" />
+
+        <EditText
+            android:id="@+id/referenceNumberEdittext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/background_round_4_orange_stroke"
+            android:cursorVisible="false"
+            android:hint="123456789"
+            android:maxLines="1"
+            android:inputType="number"
+            android:paddingLeft="24dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:textColor="@color/colorBlack"
+            android:textAppearance="@style/Quicksand_16_Black"
+            android:textColorHint="#C1C8D9"
+            android:letterSpacing=".3"
+            app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+            app:layout_constraintRight_toRightOf="@id/rightGuideline"
+            app:layout_constraintTop_toBottomOf="@id/referenceNumberShowingTextView" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+            app:layout_constraintRight_toRightOf="@id/rightGuideline"
+            app:layout_constraintTop_toBottomOf="@id/referenceNumberEdittext"
+            android:layout_marginTop="16dp"
+            android:paddingBottom="8dp"
+            android:background="@drawable/background_round_4_orange_stroke"
+            android:layout_height="wrap_content"
+            android:id="@+id/howToTextLayout">
+
+            <TextView
+                android:id="@+id/howToTextShowingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="How To :"
+                android:layout_marginLeft="8dp"
+                android:textAppearance="@style/Rubbik_14_Black_Medium"
+                />
+
+            <TextView
+                android:id="@+id/howToTextTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/howToTextShowingTextView"
+                android:text="@string/how_to_text"
+                android:textAppearance="@style/Rubbik_14_Black"
+                android:textSize="10sp"
+                android:padding="8dp"
+                />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Status"
+            android:textAppearance="@style/Rubbik_14_Black_Medium"
+            android:textColor="@color/colorPrimaryOrange"
+            app:layout_constraintBottom_toBottomOf="@id/bottomGuideline"
+            app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+            app:layout_constraintRight_toRightOf="@id/rightGuideline"
+            android:id="@+id/viewStatusTextView"
+            android:textAllCaps="true"
+            android:clickable="true"
+            android:elevation="2dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/depositButton"
+            app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+            app:layout_constraintRight_toRightOf="@id/rightGuideline"
+            app:layout_constraintBottom_toTopOf="@id/viewStatusTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorPrimaryOrange"
+            app:cardCornerRadius="32dp"
+            app:cardElevation="0dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintWidth_percent=".9">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Deposit Balance"
+                android:textAllCaps="true"
+                android:padding="16dp"
+                android:textAppearance="@style/Rubbik_14_Black_Medium"
+                android:textColor="@color/colorWhite"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

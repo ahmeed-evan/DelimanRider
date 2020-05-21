@@ -100,7 +100,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:src="@drawable/ic_loacation_sign_image"
+            android:src="@drawable/ic_loacation_sign_image_orange"
             app:layout_constraintLeft_toRightOf="@id/leftGuideline"
             app:layout_constraintTop_toBottomOf="@id/profileImage" />
 
@@ -131,7 +131,7 @@
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_marginTop="32dp"
-            app:cardBackgroundColor="#EB5757"
+            app:cardBackgroundColor="@color/colorRed"
             app:cardCornerRadius="24dp"
             app:cardElevation="0dp"
             app:layout_constraintBottom_toTopOf="@id/bottomGuideline"

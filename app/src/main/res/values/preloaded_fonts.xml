@@ -3,6 +3,9 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/open_sans</item>
         <item>@font/open_sans_light</item>
+        <item>@font/quicksand</item>
+        <item>@font/quicksand_medium</item>
         <item>@font/rubik</item>
+        <item>@font/rubik_medium</item>
     </array>
 </resources>
