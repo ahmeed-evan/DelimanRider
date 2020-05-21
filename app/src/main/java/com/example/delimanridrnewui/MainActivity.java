@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.container,new TestFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,new DepositStatusFragment()).commit();
 
     }
 }

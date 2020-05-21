@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <TextView
+        android:id="@+id/refnumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="8dp"
+        android:text="123456789"
+        android:textAppearance="@style/Quicksand_14_Black_Medium" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingLeft="38dp"
+        android:layout_alignBottom="@id/refnumberTextView"
+        android:layout_alignTop="@id/refnumberTextView">
+
+        <TextView
+            android:id="@+id/amountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5000"
+            android:textAppearance="@style/Quicksand_14_Black_Medium" />
+
+        <TextView
+            android:id="@+id/BDTTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/amountTextView"
+            android:text="BDT"
+            android:textAppearance="@style/Quicksand_14_Black_Medium" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/refnumberTextView"
+        android:layout_alignBottom="@id/refnumberTextView"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="4dp"
+        android:text="Pending"
+        android:textAppearance="@style/Quicksand_14_Black_Medium" />
+
+    <TextView
+        android:id="@+id/timeShowingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/refnumberTextView"
+        android:text="Today"
+        android:textAppearance="@style/Rubbik_14_Black"
+        android:textColor="#999999"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/timeShowingTextView"
+        android:layout_marginTop="8dp"
+        android:background="#999999"
+        android:orientation="horizontal" />
+
+
+</RelativeLayout>
