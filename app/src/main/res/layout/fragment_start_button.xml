@@ -11,7 +11,7 @@
         android:id="@+id/startButton"
         app:layout_constraintWidth_percent=".45"
         android:layout_height="match_parent"
-        app:cardBackgroundColor="@color/colorYellow"
+        app:cardBackgroundColor="@color/colorPrimaryOrange"
         app:cardCornerRadius="24dp"
         app:cardElevation="2dp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -23,7 +23,7 @@
             android:layout_gravity="center_horizontal"
             android:padding="12dp"
             android:text="Start"
-            android:textAppearance="@style/Rubbik_14_Black" />
+            android:textAppearance="@style/Rubbik_14_White_Medium" />
 
     </androidx.cardview.widget.CardView>
 

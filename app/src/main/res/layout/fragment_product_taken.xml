@@ -12,7 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="56dp"
-        app:cardBackgroundColor="@color/colorBlack"
+        app:cardBackgroundColor="@color/colorLightGreen"
         app:cardCornerRadius="24dp"
         app:cardElevation="2dp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -25,7 +25,7 @@
             android:layout_gravity="center_horizontal"
             android:padding="14dp"
             android:text="Product Taken"
-            android:textAppearance="@style/Rubbik_14_Yellow" />
+            android:textAppearance="@style/Rubbik_14_Black" />
 
     </androidx.cardview.widget.CardView>
 
@@ -34,8 +34,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="56dp"
-        android:backgroundTint="@color/colorYellow"
-        android:src="@drawable/ic_phone_black"
+        android:backgroundTint="@color/colorPrimaryOrange"
+        android:src="@drawable/ic_phone_icon"
         app:borderWidth="0dp"
         app:elevation="2dp"
         app:fabCustomSize="46dp"

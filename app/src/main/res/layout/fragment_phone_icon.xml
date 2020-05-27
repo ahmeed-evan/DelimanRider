@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        android:backgroundTint="@color/colorYellow"
+        android:backgroundTint="@color/colorPrimaryOrange"
         android:src="@drawable/ic_phone_black"
         app:borderWidth="0dp"
         app:elevation="1dp"

@@ -10,7 +10,9 @@
     <color name="colorWhite">#FCFCFC</color>
     <color name="colorCream">#FFF8F2</color>
     <color name="colorGray">#E5E5E5</color>
+    <color name="colorDeepGray">#666666</color>
     <color name="colorPurple">#33BE52F2</color>
-    <color name="colorGreene">#00C48C</color>
+    <color name="colorGreen">#00C48C</color>
     <color name="colorLightOrange">#FFE2CC</color>
+    <color name="colorLightGreen">#00E6B0</color>
 </resources>

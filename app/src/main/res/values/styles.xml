@@ -22,8 +22,8 @@
         <item name="android:textStyle">normal</item>
     </style>
 
-    <style name="Open_Sans_34_Yellow">
-        <item name="android:textColor">@color/colorYellow</item>
+    <style name="Open_Sans_34_DeepGray">
+        <item name="android:textColor">@color/colorDeepGray</item>
         <item name="fontFamily">@font/open_sans</item>
         <item name="android:textSize">34sp</item>
         <item name="android:textStyle">normal</item>
