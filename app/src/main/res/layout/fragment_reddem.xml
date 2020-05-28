@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryOrange">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="56dp" />
+
+    <ImageView
+        android:id="@+id/fabBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_arrow_back_white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/headerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:text="Reddem"
+        android:textAppearance="@style/Quicksand_20_White_Medium"
+        app:layout_constraintLeft_toRightOf="@id/fabBack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/background_round_top_16"
+        app:layout_constraintBottom_toBottomOf="@id/headerLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topGuideline">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/leftGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/rightGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bottomGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="32dp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/balanceCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            app:cardBackgroundColor="@color/colorLightDeepOrange"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+            app:layout_constraintRight_toRightOf="@id/rightGuideline"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/currentBalanceTextShowingTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Your Current Balance"
+                    android:textAppearance="@style/Rubbik_14_Black_Medium" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:paddingBottom="24dp">
+
+                    <TextView
+                        android:id="@+id/currentBalanceTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5000"
+                        android:textAppearance="@style/Rubbik_34_Black_Medium" />
+
+                    <TextView
+                        android:id="@+id/BDTTextShowingTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="BDT"
+                        android:textAppearance="@style/Rubbik_34_Black_Medium" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/redeemAmountLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:elevation="2dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+            app:layout_constraintRight_toRightOf="@id/rightGuideline"
+            app:layout_constraintTop_toBottomOf="@id/balanceCard">
+
+            <TextView
+                android:id="@+id/redeemAmountTextShowingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Redem Amount"
+                android:textAppearance="@style/Rubbik_16_Black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingBottom="24dp">
+
+                <EditText
+                    android:id="@+id/redeemAmountTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:cursorVisible="false"
+                    android:hint="2000"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:maxLines="1"
+                    android:textAppearance="@style/Rubbik_14_Black_Medium"
+                    android:textColor="@color/colorLightGreen"
+                    android:textColorHint="@color/colorLightGreen"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="BDT"
+                    android:textAppearance="@style/Rubbik_14_Black_Medium"
+                    android:textColor="@color/colorLightGreen"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/sendToTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Send To"
+            android:textAppearance="@style/Rubbik_14_Black_Medium"
+            app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@id/redeemAmountLayout" />
+
+        <RelativeLayout
+            app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@id/sendToTextView"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/background_round_4_orange_stroke_transparent"
+            android:id="@+id/clickedBorderLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            
+        </RelativeLayout>
+        
+        
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

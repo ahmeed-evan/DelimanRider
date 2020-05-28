@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="32dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profilePictureImageView"
+        app:layout_constraintRight_toRightOf="@id/rightGuideline"
+        android:src="@drawable/sara_profile_picture"
+        app:layout_constraintTop_toTopOf="@id/topGuideline"
+        android:elevation="2dp"/>
+
+    <ImageView
+        android:id="@+id/notificationBellImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:src="@drawable/ic_notification_bell"
+        app:layout_constraintRight_toRightOf="@id/rightGuideline"
+        app:layout_constraintTop_toBottomOf="@id/profilePictureImageView"
+        android:layout_marginTop="32dp"/>
+
+    <ImageView
+        android:id="@+id/currentLocationPointerImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:src="@drawable/ic_current_pointer"
+        app:layout_constraintRight_toRightOf="@id/rightGuideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryOrange">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="56dp" />
+
+    <ImageView
+        android:id="@+id/fabBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_arrow_back_white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/headerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:text="Virtual Account"
+        android:textAppearance="@style/Quicksand_20_White_Medium"
+        app:layout_constraintLeft_toRightOf="@id/fabBack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/background_round_top_16"
+        app:layout_constraintBottom_toBottomOf="@id/headerLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topGuideline">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/leftGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/rightGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bottomGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="32dp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/balanceCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            app:cardBackgroundColor="@color/colorLightDeepOrange"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+            app:layout_constraintRight_toRightOf="@id/rightGuideline"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/currentBalanceTextShowingTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Your Current Balance"
+                    android:textAppearance="@style/Rubbik_14_Black_Medium" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:paddingBottom="24dp">
+
+                    <TextView
+                        android:id="@+id/currentBalanceTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5000"
+                        android:textAppearance="@style/Rubbik_34_Black_Medium" />
+
+                    <TextView
+                        android:id="@+id/BDTTextShowingTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="BDT"
+                        android:textAppearance="@style/Rubbik_34_Black_Medium" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/deductionEnquiryLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+            app:layout_constraintRight_toRightOf="@id/rightGuideline"
+            app:layout_constraintTop_toBottomOf="@id/balanceCard">
+
+            <TextView
+                android:id="@+id/deductionEnquiryTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Deduction Enquiry"
+                android:textAppearance="@style/Rubbik_14_Black" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/deductionEnquiryTextView"
+                android:layout_alignBottom="@id/deductionEnquiryTextView"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_right_arrow_half" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/redeemHistoryLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+            app:layout_constraintRight_toRightOf="@id/rightGuideline"
+            app:layout_constraintTop_toBottomOf="@id/deductionEnquiryLayout">
+
+            <TextView
+                android:id="@+id/redeemHistoryTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Redeem History"
+                android:textAppearance="@style/Rubbik_14_Black" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/redeemHistoryTextView"
+                android:layout_alignBottom="@id/redeemHistoryTextView"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_right_arrow_half" />
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/depositButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorPrimaryOrange"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/bottomGuideline"
+            app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+            app:layout_constraintRight_toRightOf="@id/rightGuideline"
+            app:layout_constraintWidth_percent=".9">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="16dp"
+                android:text="Reddem"
+                android:textAllCaps="true"
+                android:textAppearance="@style/Rubbik_14_Black_Medium"
+                android:textColor="@color/colorWhite" />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

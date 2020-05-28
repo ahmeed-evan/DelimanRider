@@ -109,6 +109,7 @@
             android:layout_marginTop="16dp"
             android:text="@string/cancel_warning_text"
             android:textAppearance="@style/Open_Sans_14_Black"
+            android:textColor="@color/colorDeepGray"
             app:layout_constraintStart_toStartOf="@id/warningTextView"
             app:layout_constraintTop_toBottomOf="@id/warningTextView" />
 
