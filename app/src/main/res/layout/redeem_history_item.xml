@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:padding="4dp">
+
+    <TextView
+        android:id="@+id/redeemAmountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="16dp"
+        android:text="2000"
+        android:textAppearance="@style/Rubbik_16_Black" />
+
+    <TextView
+        android:id="@+id/BDTTextShowingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/redeemAmountTextView"
+        android:layout_alignBottom="@id/redeemAmountTextView"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/redeemAmountTextView"
+        android:text="BDT"
+        android:textAllCaps="true"
+        android:textAppearance="@style/Rubbik_16_Black" />
+
+    <TextView
+        android:id="@+id/timeShowingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/redeemAmountTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="4dp"
+        android:text="Today $.40 pm"
+        android:textAppearance="@style/Rubbik_14_Gray"
+        android:textSize="13sp" />
+
+    <ImageView
+        android:id="@+id/redeemMethodIconImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/redeemAmountTextView"
+        android:layout_alignBottom="@id/timeShowingTextView"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_bkash_logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/timeShowingTextView"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorGray" />
+
+</RelativeLayout>

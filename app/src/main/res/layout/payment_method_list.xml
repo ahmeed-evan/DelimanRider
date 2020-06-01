@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:paddingRight="24dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/paymentMethodLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/paymentMethodIconImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_bkash_logo" />
+
+        <TextView
+            android:id="@+id/paymentMethodtTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="Bkash"
+            android:textAppearance="@style/Rubbik_14_Black" />
+
+    </LinearLayout>
+
+    <RadioButton
+        android:id="@+id/selectorRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_alignBottom="@id/paymentMethodLayout"
+        android:layout_alignTop="@id/paymentMethodLayout"
+        android:layout_toRightOf="@id/paymentMethodLayout">
+
+    </RadioButton>
+
+
+</RelativeLayout>

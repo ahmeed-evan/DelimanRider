@@ -179,7 +179,7 @@
         </RelativeLayout>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/depositButton"
+            android:id="@+id/redeemButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:cardBackgroundColor="@color/colorPrimaryOrange"

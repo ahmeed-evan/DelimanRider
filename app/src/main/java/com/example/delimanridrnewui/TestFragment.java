@@ -13,7 +13,7 @@ public class TestFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.fragment_product_taken_merchant_code,container,false);
+        View view=inflater.inflate(R.layout.fragment_deposit_status,container,false);
         return view;
     }
 }
