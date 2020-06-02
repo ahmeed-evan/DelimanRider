@@ -38,7 +38,7 @@ public class RedeemHistoryFragment extends Fragment {
     }
 
     private void loadContents() {
-        redeemHistoryRecyclerView.setAdapter(new RedeemHistoryAdapter(redeemHistoryList));
+        redeemHistoryRecyclerView.setAdapter(new RedeemHistoryAdapter(redeemHistoryList,this));
         redeemHistoryRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         addItemOnList();
     }

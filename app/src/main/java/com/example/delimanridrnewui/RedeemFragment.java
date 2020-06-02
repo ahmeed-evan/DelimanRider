@@ -4,20 +4,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.delimanridrnewui.Model.PaymentMethod;
-import com.example.delimanridrnewui.R;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -39,13 +33,13 @@ public class RedeemFragment extends Fragment {
     }
 
     private void loadContents() {
-        paymentMethodRecycler.setAdapter(new RedeemMethodAdapter(paymentMethodList));
+        paymentMethodRecycler.setAdapter(new RedeemMethodAdapter(paymentMethodList,this));
         paymentMethodRecycler.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
     }
 
     private void addPayMethod() {
         paymentMethodList.add(new PaymentMethod(R.drawable.ic_bkash_logo, "Bkash"));
-        paymentMethodList.add(new PaymentMethod(R.drawable.ic_bkash_logo, "UCash"));
+        paymentMethodList.add(new PaymentMethod(R.drawable.ic_bkash_logo, "Bangladesh Bank"));
         paymentMethodList.add(new PaymentMethod(R.drawable.ic_bkash_logo, "UCash"));
     }
 }

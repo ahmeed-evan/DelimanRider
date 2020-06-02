@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:paddingRight="24dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingRight="16dp"
     android:paddingTop="8dp"
-    android:paddingBottom="8dp"
-    android:layout_height="wrap_content">
+    android:background="@color/colorWhite"
+    android:paddingBottom="8dp">
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/paymentMethodLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:background="@null"
+        android:paddingLeft="8dp"
+        android:paddingTop="12dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="15dp">
 
         <ImageView
             android:id="@+id/paymentMethodIconImage"
@@ -23,22 +28,23 @@
             android:id="@+id/paymentMethodtTitleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
             android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/paymentMethodIconImage"
             android:text="Bkash"
             android:textAppearance="@style/Rubbik_14_Black" />
+    </RelativeLayout>
 
-    </LinearLayout>
-
-    <RadioButton
-        android:id="@+id/selectorRadioButton"
+    <ImageView
+        android:id="@+id/doneIcon"
         android:layout_width="wrap_content"
+        android:visibility="invisible"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_alignBottom="@id/paymentMethodLayout"
         android:layout_alignTop="@id/paymentMethodLayout"
-        android:layout_toRightOf="@id/paymentMethodLayout">
-
-    </RadioButton>
-
+        android:layout_alignBottom="@id/paymentMethodLayout"
+        android:layout_toRightOf="@id/paymentMethodLayout"
+        android:layout_marginLeft="-14dp"
+        android:src="@drawable/ic_orange_tick"
+        />
 
 </RelativeLayout>
